@@ -4,9 +4,10 @@
 class Mips64ElfGcc < Formula
   desc "GNU GCC C toolchain for N64 mips64-elf target"
   homepage "https://gcc.gnu.org/"
-  url "https://ftp.gnu.org/gnu/gcc/gcc-10.2.0/gcc-10.2.0.tar.xz"
-  mirror "https://ftpmirror.gnu.org/gnu/gcc/gcc-10.2.0/gcc-10.2.0.tar.xz" 
-  sha256 "b8dd4368bb9c7f0b98188317ee0254dd8cc99d1e3a18d0ff146c855fe16c1d8c"
+  url "https://ftp.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz" 
+
+  head "https://gcc.gnu.org/git/gcc.git", branch: "master"
 
   depends_on "gmp"
   depends_on "isl"
