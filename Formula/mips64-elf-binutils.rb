@@ -25,7 +25,7 @@ class Mips64ElfBinutils < Formula
     args = %W[
       --disable-debug
       --disable-dependency-tracking
-      --disable-silent-rules
+      --enable-deterministic-archives
       --prefix=#{prefix}
       --includedir=#{include}/mip64-elf-binutils/#{version_suffix}
       --infodir=#{info}/mip64-elf-binutils/#{version_suffix}
@@ -33,15 +33,15 @@ class Mips64ElfBinutils < Formula
       --mandir=#{man}/mip64-elf-binutils/#{version_suffix}
       --target=mips64-elf
       --with-arch=vr4300
+      --disable-werror
+      --enable-interwork
+      --enable-multilib
       --enable-64-bit-bfd
       --enable-plugins
-      --enable-shared
-      --disable-gold
-      --disable-multilib
+      --enable-targets=all
+      --with-system-zlib
+      --with-zstd
       --disable-nls
-      --disable-rpath
-      --disable-static
-      --disable-werror
     ]
 
     mkdir "build" do
