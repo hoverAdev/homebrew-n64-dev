@@ -39,6 +39,7 @@ class Mips64ElfBinutils < Formula
       --enable-64-bit-bfd
       --enable-plugins
       --enable-targets=all
+      --with-zstd
       --with-system-zlib
       --disable-nls
     ]
