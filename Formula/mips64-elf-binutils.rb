@@ -1,11 +1,12 @@
 class Mips64ElfBinutils < Formula
   desc "GNU binutils for the N64 mip64-elf target"
   homepage "https://www.gnu.org/software/binutils/"
-  url "https://ftp.gnu.org/gnu/binutils/binutils-2.37.tar.xz"
-  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.37.tar.xz" 
-  sha256 "820d9724f020a3e69cb337893a0b63c2db161dadcb0e06fc11dc29eb1e84a32c"
+  url "https://ftp.gnu.org/gnu/binutils/binutils-2.45.tar.xz"
+  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.45.tar.xz"
+  sha256 "c50c0e7f9cb188980e2cc97e4537626b1672441815587f1eab69d2a1bfbef5d2"
 
   depends_on "gettext"
+  depends_on "texinfo"
   
   uses_from_macos "zlib"
 
