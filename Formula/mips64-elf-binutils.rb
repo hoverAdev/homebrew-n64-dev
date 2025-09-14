@@ -8,7 +8,7 @@ class Mips64ElfBinutils < Formula
 
   depends_on "gettext"
   depends_on "texinfo"
-  depends_on "mpfr"
+  depends_on "zstd"
   
   uses_from_macos "zlib"
 
@@ -40,7 +40,6 @@ class Mips64ElfBinutils < Formula
       --enable-plugins
       --enable-targets=all
       --with-system-zlib
-      --with-zstd
       --disable-nls
     ]
 
