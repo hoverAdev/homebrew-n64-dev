@@ -7,6 +7,7 @@ class Mips64ElfBinutils < Formula
 
   depends_on "gettext"
   depends_on "texinfo"
+  depends_on "mpfr"
   
   uses_from_macos "zlib"
 
