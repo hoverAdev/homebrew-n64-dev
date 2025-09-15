@@ -52,7 +52,7 @@ class Mips64ElfGcc < Formula
       --libdir=#{lib}/mip64-elf-gcc/#{version_suffix}
       --target=mips64-elf
       --with-arch=vr4300
-      --enable-languages=c,c++,objc,obj-c++,fortran 
+      --enable-languages=c 
       --without-headers 
       --with-newlib
       --with-gnu-as=mips64-elf-as
