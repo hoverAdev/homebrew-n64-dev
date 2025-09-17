@@ -1,8 +1,8 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Mips64ElfGcc < Formula
-  desc "GNU GCC C toolchain for N64 mips64-elf target"
+class MipsLinuxGnuGcc < Formula
+  desc "GNU GCC C toolchain for N64 mips-linux-gnu target"
   homepage "https://gcc.gnu.org/"
   url "https://ftp.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz"
   mirror "https://ftpmirror.gnu.org/gnu/gcc/gcc-15.2.0/gcc-15.2.0.tar.xz" 
@@ -13,7 +13,7 @@ class Mips64ElfGcc < Formula
   depends_on "isl"
   depends_on "libmpc"
   depends_on "mpfr"
-  depends_on "mips64-elf-binutils"
+  depends_on "mips-linux-gnu-binutils"
   depends_on "make"
 
   uses_from_macos "zlib"
@@ -49,14 +49,14 @@ class Mips64ElfGcc < Formula
       --prefix=#{prefix}
       --infodir=#{info}
       --mandir=#{man}
-      --libdir=#{lib}/mips64-elf-gcc/#{version_suffix}
-      --target=mips64-elf
+      --libdir=#{lib}/mips-linux-gnu-gcc/#{version_suffix}
+      --target=mips-linux-gnu
       --with-arch=vr4300
-      --enable-languages=c 
-      --without-headers 
+      --enable-languages=all
+      --without-headers
       --with-newlib
-      --with-gnu-as=mips64-elf-as
-      --with-gnu-ld=mips64-elf-ld
+      --with-gnu-as=mips-linux-gnu-as
+      --with-gnu-ld=mips-linux-gnu-ld
       --enable-checking=release
       --enable-shared
       --enable-shared-libgcc
@@ -101,6 +101,6 @@ class Mips64ElfGcc < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "#{bin}/mips64-elf-gcc", "--version"
+    system "#{bin}/mips-linux-gnu-gcc", "--version"
   end
 end

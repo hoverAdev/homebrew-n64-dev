@@ -1,11 +1,14 @@
 class MipsLinuxGnuBinutils < Formula
-  desc "GNU binutils for mips-linux-gnu target"
+  desc "GNU binutils for the N64 mips-linux-gnu target"
   homepage "https://www.gnu.org/software/binutils/"
-  url "https://ftp.gnu.org/gnu/binutils/binutils-2.37.tar.xz"
-  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.37.tar.xz" 
-  sha256 "820d9724f020a3e69cb337893a0b63c2db161dadcb0e06fc11dc29eb1e84a32c"
+  url "https://ftp.gnu.org/gnu/binutils/binutils-2.45.tar.xz"
+  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.45.tar.xz"
+  sha256 "c50c0e7f9cb188980e2cc97e4537626b1672441815587f1eab69d2a1bfbef5d2"
+  head "git://sourceware.org/git/binutils-gdb.git", branch: "master"
 
   depends_on "gettext"
+  depends_on "texinfo"
+  depends_on "zstd"
   
   uses_from_macos "zlib"
 
@@ -22,7 +25,7 @@ class MipsLinuxGnuBinutils < Formula
     args = %W[
       --disable-debug
       --disable-dependency-tracking
-      --disable-silent-rules
+      --enable-deterministic-archives
       --prefix=#{prefix}
       --includedir=#{include}/mips-linux-gnu-binutils/#{version_suffix}
       --infodir=#{info}/mips-linux-gnu-binutils/#{version_suffix}
@@ -30,15 +33,15 @@ class MipsLinuxGnuBinutils < Formula
       --mandir=#{man}/mips-linux-gnu-binutils/#{version_suffix}
       --target=mips-linux-gnu
       --with-arch=vr4300
+      --disable-werror
+      --enable-interwork
+      --enable-multilib
       --enable-64-bit-bfd
       --enable-plugins
-      --enable-shared
-      --disable-gold
-      --disable-multilib
+      --enable-targets=all
+      --with-zstd
+      --with-system-zlib
       --disable-nls
-      --disable-rpath
-      --disable-static
-      --disable-werror
     ]
 
     mkdir "build" do

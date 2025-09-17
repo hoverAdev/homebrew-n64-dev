@@ -27,10 +27,10 @@ class Mips64ElfBinutils < Formula
       --disable-dependency-tracking
       --enable-deterministic-archives
       --prefix=#{prefix}
-      --includedir=#{include}/mip64-elf-binutils/#{version_suffix}
-      --infodir=#{info}/mip64-elf-binutils/#{version_suffix}
-      --libdir=#{lib}/mip64-elf-binutils/#{version_suffix}
-      --mandir=#{man}/mip64-elf-binutils/#{version_suffix}
+      --includedir=#{include}/mips64-elf-binutils/#{version_suffix}
+      --infodir=#{info}/mips64-elf-binutils/#{version_suffix}
+      --libdir=#{lib}/mips64-elf-binutils/#{version_suffix}
+      --mandir=#{man}/mips64-elf-binutils/#{version_suffix}
       --target=mips64-elf
       --with-arch=vr4300
       --disable-werror

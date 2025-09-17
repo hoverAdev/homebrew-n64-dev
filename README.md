@@ -8,14 +8,14 @@
 * `qemu-irix`
 
 ## How do I install these formulae?
-`brew tap tehzz/n64-dev` and then `brew install <formula>`.
+`brew tap hoverAdev/n64-dev` and then `brew install <formula>`.
 
-Or `brew install tehzz/n64-dev/<formula>`
+Or `brew install hoverAdev/n64-dev/<formula>`
 
 Or install via URL (which will not receive updates):
 
 ```
-brew install https://raw.githubusercontent.com/tehzz/homebrew-n64-dev/master/Formula/<formula>.rb
+brew install https://raw.githubusercontent.com/hoverAdev/homebrew-n64-dev/master/Formula/<formula>.rb
 ```
 
 ## Documentation
