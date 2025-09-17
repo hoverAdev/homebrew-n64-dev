@@ -46,8 +46,8 @@ class MipsLinuxGnuBinutils < Formula
 
     mkdir "build" do
       system "../configure", *args
-      system "make"
-      system "make", "install"
+      system "gmake"
+      system "gmake", "install"
     end
                           
   end
