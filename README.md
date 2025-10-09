@@ -1,4 +1,4 @@
-# macOS N64 Dev Homebrew Formulae
+# My Formulae
 
 ## Formulae
 
@@ -8,14 +8,14 @@
 * `qemu-irix`
 
 ## How do I install these formulae?
-`brew tap hoverAdev/n64-dev` and then `brew install <formula>`.
+`brew tap hoverAdev/formulae` and then `brew install <formula>`.
 
-Or `brew install hoverAdev/n64-dev/<formula>`
+Or `brew install hoverAdev/formulae/<formula>`
 
 Or install via URL (which will not receive updates):
 
 ```
-brew install https://raw.githubusercontent.com/hoverAdev/homebrew-n64-dev/master/Formula/<formula>.rb
+brew install https://raw.githubusercontent.com/hoverAdev/homebrew-formulae/master/Formula/<formula>.rb
 ```
 
 ## Documentation
